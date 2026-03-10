@@ -3,6 +3,8 @@ const container = document.querySelector('main');
 
 let allUsers = [];
 
+
+//fetchUsers
 async function fetchUsers(){
     try{
 
@@ -21,6 +23,7 @@ async function fetchUsers(){
     }
 }
 
+//displayUsers
 function renderUsers(users){
     container.innerHTML = '';
    
@@ -41,5 +44,19 @@ function renderUsers(users){
     container.innerHTML += card;
     })
 }
+
+//filteredUsers
+function searchUsers(){
+
+    const term = inputText.value.toLowerCase();
+
+    const filteredUsers = allUsers.filter(user=>{
+        user.name.toLowerCase().includes(term);
+    })
+
+    renderUsers(filteredUsers);
+}
+
+inputText.addEventListener('input',searchUsers);
 
 fetchUsers();
