@@ -1,0 +1,36 @@
+header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+main{
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 10px;
+}
+
+.card{
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+footer{
+    text-align: center;
+    background-color: darkblue;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    color: white;
+}
+
