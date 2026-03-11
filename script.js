@@ -50,9 +50,9 @@ function searchUsers(){
 
     const term = inputText.value.toLowerCase();
 
-    const filteredUsers = allUsers.filter(user=>{
-        user.name.toLowerCase().includes(term);
-    })
+    const filteredUsers = allUsers.filter(user=>
+        user.name.toLowerCase().includes(term)
+    );
 
     renderUsers(filteredUsers);
 }
